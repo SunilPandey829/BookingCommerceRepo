@@ -1,5 +1,7 @@
 package com.bookingCommerce.qa.pages;
 
-public class BookingProductsPage {
+import com.BookingCom.qa.base.TestBase;
+
+public class BookingProductsPage extends TestBase{
 
 }

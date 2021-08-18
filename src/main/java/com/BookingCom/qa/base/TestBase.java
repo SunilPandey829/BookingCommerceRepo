@@ -11,22 +11,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import com.bookingCommerce.qa.utility.TestUtil;
 
 
 public class TestBase {
-	static WebDriver driver;
-	static Properties prop;
+	public static WebDriver driver;
+	public static Properties prop;
 	
 	
 	public TestBase()
 	{
 		try
 		{
-			Properties prop=new Properties();
-			FileInputStream ip=new FileInputStream("G:\\WorkSpace\\BookingCommerceTest\\src\\main\\java\\com\\bookingCommerce\\qa\\config\\config.properties");
+			prop=new Properties();
+			FileInputStream ip=new FileInputStream("G:/WorkSpace/BookingCommerceTest/src/main/java/com/bookingCommerce/qa/config/config.properties");
 			prop.load(ip);	
-		}
+																				 }
 		catch(FileNotFoundException e)
 		{
 			e.printStackTrace();
@@ -37,12 +36,11 @@ public class TestBase {
 		}
 	}
 	public static void initilization()
-	{
-		System.out.println(prop.getProperty("browser"));	
-		String browserName=prop.getProperty("browser");
+	{	 
+		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","G:\\WorkSpace\\BookingCommerceTest\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "G:/WorkSpace/BookingCommerceTest/Drivers/chromedriver.exe");
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equals("FF"))
@@ -51,7 +49,7 @@ public class TestBase {
 			driver=new FirefoxDriver();
 			
 		}
-		else if(browserName.equals("Safari"))
+		else if(browserName.equals("Safari")) 
 		{
 			driver=new SafariDriver();
 		}

@@ -1,5 +1,7 @@
 package com.bookingCommerce.qa.pages;
 
-public class CategoriesPage {
+import com.BookingCom.qa.base.TestBase;
+
+public class CategoriesPage extends TestBase{
 
 }
